@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FFFC00">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Chat"
+                android:textSize="26sp" />
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="58dp"
+                android:text="배너광고" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container">
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 1"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView3"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오후 3:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container2">
+
+                                <TextView
+                                    android:id="@+id/textView10"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 2"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container2"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView13"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView13"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오후 2:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container2"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView12"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container3">
+
+                                <TextView
+                                    android:id="@+id/textView33"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 3"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container3"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView32"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView32"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오후 1:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container3"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView23"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView43"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container43">
+
+                                <TextView
+                                    android:id="@+id/textView433"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 4"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container43"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView432"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView432"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오후 12:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container43"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView423"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView643"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container643">
+
+                                <TextView
+                                    android:id="@+id/textView6433"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 5"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container643"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView6432"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView6432"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오전 11:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container643"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView6423"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView743"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container743">
+
+                                <TextView
+                                    android:id="@+id/textView7433"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 6"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container743"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView7432"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView7432"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오전 10:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container743"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView7423"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView843"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container843">
+
+                                <TextView
+                                    android:id="@+id/textView8433"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 7"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container843"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView8432"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView8432"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오전 9:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container843"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView8423"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView943"
+                            android:layout_width="68dp"
+                            android:layout_height="68dp"
+                            tools:srcCompat="@tools:sample/avatars" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_marginStart="5dp"
+                            android:layout_marginEnd="10dp">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/chat_container943">
+
+                                <TextView
+                                    android:id="@+id/textView9433"
+                                    android:layout_width="85dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="친구 8"
+                                    android:textSize="20sp"
+                                    app:layout_constraintHorizontal_bias="0.01"
+                                    app:layout_constraintLeft_toLeftOf="@+id/chat_container943"
+                                    app:layout_constraintRight_toLeftOf="@+id/textView9432"
+                                    app:layout_constraintTop_toTopOf="parent" />
+
+                                <TextView
+                                    android:id="@+id/textView9432"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="오전 8:42"
+                                    app:layout_constraintBottom_toBottomOf="@id/chat_container943"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    app:layout_constraintVertical_bias="0.0" />
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+
+                            <TextView
+                                android:id="@+id/textView9423"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:layout_marginStart="5dp"
+                                android:text="메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 메세지내용 ..." />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFC00"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:background="#00000000"
+                android:text="홈" />
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:background="#22000000"
+                android:text="채팅" />
+            <Button
+                android:id="@+id/button9"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:background="#00000000"
+                android:text="설정" />
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
